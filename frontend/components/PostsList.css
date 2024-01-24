@@ -1,0 +1,38 @@
+.posts-list {
+  margin: auto;
+  padding: 0;
+  list-style: none;
+  overflow-y: scroll;
+  height: 100vh;
+  width: 80vw;
+  max-width: 600px;
+
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+::-webkit-scrollbar {
+  display: none;   /* Chrome */
+}
+
+.post-item {
+  margin: 10px 0;
+  padding: 10px;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+
+.post-item:hover {
+  background-color: #997950;
+}
+
+.post-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.post-link:hover {
+  color: #007BFF;
+}

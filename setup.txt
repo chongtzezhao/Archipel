@@ -1,0 +1,4 @@
+https://www.dhiwise.com/post/building-scalable-web-applications-with-react-and-golang
+React Hot Reload: https://stackoverflow.com/questions/65445600/hot-reload-is-not-working-in-my-react-app
+
+https://youtu.be/pbcTa-a3LBw

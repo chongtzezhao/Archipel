@@ -1,0 +1,32 @@
+.card {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #e7cfb4;
+  border-radius: 5px;
+  background-color: #deb887;
+}
+
+.card-body {
+  margin-bottom: 20px;
+}
+
+.card-title {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-subtitle {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #666;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.card-text {
+  font-size: 14px;
+}
+
+.comments {
+  margin-left: 40px;
+}
