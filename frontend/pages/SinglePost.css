@@ -1,7 +1,9 @@
 .card {
-  margin: 20px;
+  position: relative;
+  margin: 0px auto;
   padding: 20px;
-  border: 1px solid #e7cfb4;
+  max-width: 800px;
+  border: 1px solid #623412;
   border-radius: 5px;
   background-color: #deb887;
 }
@@ -28,5 +30,27 @@
 }
 
 .comments {
-  margin-left: 40px;
+  margin: 0px auto;
+  width: 100%;
+  max-width: 700px;
+}
+
+.comment {
+  margin: 10px;
+}
+
+.edit-post {
+  margin-top: 20px;
+}
+
+.post-topics {
+  display: flex;
+}
+
+.topic {
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid #623412;
+  border-radius: 5px;
+  background-color: #deb887;
 }

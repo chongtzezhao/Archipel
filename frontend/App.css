@@ -35,8 +35,17 @@
 }
 
 #ocean {
-  margin: 0 auto;
-  min-width: 100vw;
+  position: relative;
+  margin-top: 55px;
+  width: 100vw;
   min-height: 100vh;
   background-color: #65b1f0;
+}
+
+.routes {
+  flex-direction: row;
+}
+
+.nav-link {
+  margin: 0px 1rem;
 }

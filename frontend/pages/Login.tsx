@@ -20,7 +20,7 @@ const Login = (props: { setUsername: (username: string) => void }) => {
     });
 
     const content = await response.json();
-    console.log("LOGGED USER IN: " + JSON.stringify(content));
+    // console.log("LOGGED USER IN: " + JSON.stringify(content));
     setRedirect(true);
     props.setUsername(content.username);
   }
@@ -30,7 +30,7 @@ const Login = (props: { setUsername: (username: string) => void }) => {
   }
 
   return (
-    <main className="form-signin">
+    <div className="form-signin">
       <form onSubmit={submit}>
         <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
         <input type="email" className="form-control" placeholder="Email address" required
@@ -43,7 +43,7 @@ const Login = (props: { setUsername: (username: string) => void }) => {
 
         <button className="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
       </form>
-    </main>
+    </div>
   );
 };
 

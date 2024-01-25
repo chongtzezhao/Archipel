@@ -16,15 +16,11 @@ func Setup(app *fiber.App) {
 	app.Post("/api/newpost", controllers.NewPost)
 	app.Get("/api/posts", controllers.GetPosts)
 	app.Get("/api/singlepost/", controllers.GetSinglePost)
+	app.Post("/api/deletepost/", controllers.DeletePost)
+	app.Post("/api/editpost/", controllers.EditPost)
 
 	app.Post("/api/newcomment/", controllers.NewComment)
-
-	// frontend routes
-	frontend := []string{"", "login", "register", "posts", "post/:id", "newpost", "werw/werrw"}
-
-	for _, route := range frontend {
-		app.Get("/"+route, controllers.Home)
-	}
+	app.Post("/api/deletecomment/", controllers.DeleteComment)
 
 	app.Use(controllers.Home)
 

@@ -25,6 +25,8 @@ import './App.css';
 
 export default function App() {
   const [username, setUsername] = useState('');
+  const [searchQuery, setQuery] = useState('');
+  const [getMode, setGetMode] = useState('');
 
   useEffect(() => {
     (
@@ -37,24 +39,27 @@ export default function App() {
         const content = await response.json();
 
         setUsername(content.username);
+        console.log("USER: " + JSON.stringify(content.username));
+        console.log("USER: " + JSON.stringify(username));
       }
     )();
-  });
+  }, [username, searchQuery, getMode]);
 
 
   return (
-    <div className="app">
-      <Nav username={username} setUsername={setUsername} />
+    <main id="ocean">
+      <Nav username={username} setUsername={setUsername} setQuery={setQuery} setGetMode={setGetMode} />
       <Routes>
-        <Route path="/" element={<Home username={username} />} />
+        <Route path="/" element={<Home searchQuery={searchQuery} getMode="all" username={username}/>} />
+        <Route path="/search" element={<Home searchQuery={searchQuery} getMode={getMode} username={username}/>} />
         <Route path="/login" element={<Login setUsername={setUsername} />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/newpost" element={<NewPost username={username} />} />
+        <Route path="/newpost" element={<NewPost username={username} isNewPost={true}/>} />
         <Route path="/post/:id" element={<SinglePost username={username} />} />
-        <Route path="/werw/werrw" element={<NewPost username={username} />} />
+        <Route path="/editpost/:id" element={<NewPost username={username} isNewPost={false} />} />
+        <Route path="/myposts" element={<Home searchQuery={username} getMode="user" username={username}/>} />
         <Route path="/*" element={<NonExistent />} />
       </Routes>
-    </div>
-
+    </main>
   );
 }
