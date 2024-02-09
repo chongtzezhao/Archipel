@@ -4,7 +4,7 @@ import (
 	"os"
 
 	"github.com/chongtzezhao/archipel/database"
-	"github.com/chongtzezhao/archipel/initializers"
+	// "github.com/chongtzezhao/archipel/initializers"
 	"github.com/chongtzezhao/archipel/routes"
 
 	"github.com/gofiber/fiber/v2"
@@ -13,7 +13,7 @@ import (
 )
 
 func main() {
-	initializers.LoadEnvVariables()
+	// initializers.LoadEnvVariables()
 	database.Connect()
 
 	// Load templates
